@@ -2,8 +2,9 @@
 $active = Get-Content -Path 'C:\Users\Xavier Johanis\Desktop\PC Inventory\active.txt'
 $info = Get-Content -Path 'C:\Users\Xavier Johanis\Desktop\PC Inventory\info.txt'
 
-$adminaccount = $domain + "\administrator"
-$PASSWORD = ConvertTo-SecureString "P@ssw0rd" -AsPlainText -Force
+#$adminaccount = $domain + "\administrator"
+$adminaccount = 'user'
+$PASSWORD = ConvertTo-SecureString "pass" -AsPlainText -Force
 $UNPASSWORD = New-Object System.Management.Automation.PsCredential $adminaccount, $PASSWORD
 
 foreach ($computer in $pcs) {
